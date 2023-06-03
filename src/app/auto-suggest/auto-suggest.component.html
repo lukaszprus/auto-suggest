@@ -1,0 +1,5 @@
+<input #input type="text" (input)="subj.next(input.value)">
+
+<ul>
+  <li *ngFor="let item of items" (click)="onItemClick(item.value)">{{ item.label }}</li>
+</ul>
