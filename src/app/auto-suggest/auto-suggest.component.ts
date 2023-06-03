@@ -17,6 +17,7 @@ export type Search<T> = (term: string) => Observable<Item<T>[]>;
 })
 export class AutoSuggestComponent<T> implements OnInit, OnDestroy {
   @Input() search!: Search<T>;
+  @Input() label!: string;
   @Output() itemSelect = new EventEmitter<T>();
 
   subj = new Subject<string>();

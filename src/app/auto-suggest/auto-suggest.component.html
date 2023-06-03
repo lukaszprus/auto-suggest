@@ -1,5 +1,10 @@
-<input #input type="text" (input)="subj.next(input.value)">
+<label>{{ label }}: </label>
 
-<ul>
-  <li *ngFor="let item of items" (click)="onItemClick(item.value)">{{ item.label }}</li>
-</ul>
+<div class="search">
+  <input #input type="text" (input)="subj.next(input.value)">
+
+  <div class="items">
+    <div *ngFor="let item of items" (click)="onItemClick(item.value)">{{ item.label }}</div>
+  </div>
+</div>
+

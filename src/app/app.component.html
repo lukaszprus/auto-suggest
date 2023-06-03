@@ -1,7 +1,8 @@
-<div>
-  Character: <app-auto-suggest [search]="characterSearch" (itemSelect)="onItemSelect($event)"></app-auto-suggest>
-</div>
-
-<div>
-  Comic: <app-auto-suggest [search]="comicSearch" (itemSelect)="onItemSelect($event)"></app-auto-suggest>
+<div class="flex-container">
+  <div>
+    <app-auto-suggest [search]="characterSearch" (itemSelect)="onItemSelect($event)" [label]="'Character'"></app-auto-suggest>
+  </div>
+  <div>
+    <app-auto-suggest [search]="comicSearch" (itemSelect)="onItemSelect($event)" [label]="'Comic'"></app-auto-suggest>
+  </div>
 </div>
